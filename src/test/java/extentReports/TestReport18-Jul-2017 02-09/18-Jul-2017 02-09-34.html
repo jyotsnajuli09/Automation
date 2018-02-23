@@ -1,0 +1,2606 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/6d3843c29c354373fafad29c03a1a89b7e06c374/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Jul 18, 2017 02:09:34 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.6</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='97.561%'><span class='strong'>40</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='2.439%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='28.293%'><span class='strong'>58</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0.488%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='71.22%'>146</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSPOPCO_01 Validate login for Valid Credential</span>
+						<span class='test-time'>Jul 18, 2017 02:09:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:09:44 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:09:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+412ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:09:44 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:09:46 PM</td>
+					<td class='step-details'>entered valid username and password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:09:47 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:09:47 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:09:48 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_001Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_01.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_01.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_01.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSPOPCO_10 Filter User using different parameters</span>
+						<span class='test-time'>Jul 18, 2017 02:09:55 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:09:55 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:10:38 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 43s+296ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:09:55 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:09:58 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:10:02 PM</td>
+					<td class='step-details'>Search with username is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:10:30 PM</td>
+					<td class='step-details'>Search with fullname is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:10:32 PM</td>
+					<td class='step-details'>Search with Customercodeis successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:10:37 PM</td>
+					<td class='step-details'>Search with Accessright is successful</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:10:38 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_010Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_10.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_10.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_10.png'></li>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_10.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_10.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_10.png'></li>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_10.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_10.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_10.png'></li>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_10.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_10.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_10.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSPOPCO_13 Filter by Contact name</span>
+						<span class='test-time'>Jul 18, 2017 02:10:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:10:47 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:11:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+993ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:10:47 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:10:50 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:11:06 PM</td>
+					<td class='step-details'>Contacts search is successful</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:11:07 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_003Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_13.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_13.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOPCO_13.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_014 Contact_BackToTop Button Verification</span>
+						<span class='test-time'>Jul 18, 2017 02:11:15 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:11:15 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:11:45 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+263ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:11:15 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:11:21 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:11:37 PM</td>
+					<td class='step-details'>Contacts search is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:11:37 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:11:39 PM</td>
+					<td class='step-details'>Successfully clicked on Back to top button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:11:45 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_014Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_014.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_014.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_014.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_018 Filter Tariff</span>
+						<span class='test-time'>Jul 18, 2017 02:11:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:11:52 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:12:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+412ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:11:52 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:11:56 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:12:04 PM</td>
+					<td class='step-details'>Tariff Names search is successful</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:12:08 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_018Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_018.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_018.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_018.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_019 BackTotop_tariff</span>
+						<span class='test-time'>Jul 18, 2017 02:12:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:12:16 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:12:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+3ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:12:16 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:12:18 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:12:21 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:12:26 PM</td>
+					<td class='step-details'>Successfully clicked on Back to top button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:12:30 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_019Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_019.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_019.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_019.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_025 ManageCustomer_Customer_Filter</span>
+						<span class='test-time'>Jul 18, 2017 02:12:36 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:12:36 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:13:04 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+276ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:12:36 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:12:39 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:13:00 PM</td>
+					<td class='step-details'>Customers search is successful</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:13:04 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_025Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_025.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_025.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_025.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_034 Customer_ManageCertificate_Filter</span>
+						<span class='test-time'>Jul 18, 2017 02:13:10 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:13:10 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:13:46 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 35s+405ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:13:13 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:13:33 PM</td>
+					<td class='step-details'>customer Names search is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:13:40 PM</td>
+					<td class='step-details'>certifiacte Names search is successful</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:13:46 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_034Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_034.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_034.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_034.png'></li>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_034.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_034.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_034.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_037 ManageCustomer_Customer_BackToTop</span>
+						<span class='test-time'>Jul 18, 2017 02:13:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:13:52 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:14:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+443ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:13:52 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:13:55 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:14:02 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:14:07 PM</td>
+					<td class='step-details'>Successfully clicked on Back to top button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:14:11 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_037Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_037.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_037.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_037.png'></li>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_037.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_037.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_037.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_040 ManageCustomer_CustomerServiceProfile_Filter</span>
+						<span class='test-time'>Jul 18, 2017 02:14:18 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:14:18 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:14:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 36s+86ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:14:18 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:14:21 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:14:50 PM</td>
+					<td class='step-details'>profile Names search is successful</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:14:54 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_040Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_040.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_040.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_040.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_047 ManageCustomer_CustomerServiceProfile_Filter</span>
+						<span class='test-time'>Jul 18, 2017 02:15:01 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:15:01 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:15:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 25s+349ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:15:01 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:15:06 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:15:26 PM</td>
+					<td class='step-details'>Provisioning profile name search is successful</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:15:27 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_047Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_047.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_047.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_047.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_050 ManageCustomer_IMSIRange_Filter</span>
+						<span class='test-time'>Jul 18, 2017 02:15:35 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:15:35 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:16:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+159ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:15:35 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:15:39 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:16:05 PM</td>
+					<td class='step-details'>Next availableIMSI ranges search is successful</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:16:08 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_50Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_050.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_050.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_050.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_051 ManageCustomer_IMSIRange_BackToTop</span>
+						<span class='test-time'>Jul 18, 2017 02:16:15 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:16:15 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:16:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 31s+603ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:16:15 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:16:20 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:16:41 PM</td>
+					<td class='step-details'>Next availableIMSI ranges search is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:16:41 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:16:43 PM</td>
+					<td class='step-details'>Successfully clicked on Back to top button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:16:47 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_51Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_051.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_051.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_051.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_052 ManageCustomer_LoginAsCustomer</span>
+						<span class='test-time'>Jul 18, 2017 02:16:55 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:16:55 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:17:39 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 43s+778ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:16:55 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:17:00 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:17:36 PM</td>
+					<td class='step-details'>filteration of customer is successful</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:17:39 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_052Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_052.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_052.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_052.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_053 ManageSIM_SearchSim_Customer</span>
+						<span class='test-time'>Jul 18, 2017 02:17:46 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:17:46 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:18:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 44s+615ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:17:46 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:17:52 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:18:27 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:18:27 PM</td>
+					<td class='step-details'>filteration of customer is successful and data found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:18:31 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_053Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_053.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_053.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_053.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_054 ManageSIM_SearchSim_State</span>
+						<span class='test-time'>Jul 18, 2017 02:18:39 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:18:39 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:19:23 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 44s+49ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:18:39 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:18:43 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:19:17 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:19:18 PM</td>
+					<td class='step-details'>Sim search Results data  found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:19:23 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_054Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_054.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_054.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_054.png'></li>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_054.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_054.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_054.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_056 ManageSIM_SearchSim_Customer Service Profile</span>
+						<span class='test-time'>Jul 18, 2017 02:19:30 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:19:30 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:20:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 36s+973ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:19:30 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:19:37 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:19:56 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:19:56 PM</td>
+					<td class='step-details'>Sim search Results  data  found</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:19:56 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:20:07 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_056Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_056.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_056.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_056.png'></li>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_056.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_056.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_056.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_057 ManageSIM_SearchSim_SIM Group</span>
+						<span class='test-time'>Jul 18, 2017 02:20:14 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:20:14 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:20:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 37s+969ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:20:14 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:20:18 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:20:41 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:20:41 PM</td>
+					<td class='step-details'>Sim search Results  data  found</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:20:41 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:20:52 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_057Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_057.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_057.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_057.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_058 ManageSIM_SearchSim_OTA Status</span>
+						<span class='test-time'>Jul 18, 2017 02:20:59 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:20:59 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:21:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 44s+692ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:20:59 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:21:02 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:21:15 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:21:15 PM</td>
+					<td class='step-details'>Sim search Results  data  found</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:21:15 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:21:44 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_058Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_058.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_058.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_058.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_059 ManageSIM_SearchSim_SIM ID</span>
+						<span class='test-time'>Jul 18, 2017 02:21:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:21:51 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:22:17 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 26s+346ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:21:51 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:21:51 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:21:54 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:22:12 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:22:12 PM</td>
+					<td class='step-details'>Sim search Results data  found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:22:17 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_059Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_059.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_059.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_059.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_059 ManageSIM_SearchSim_IMSI</span>
+						<span class='test-time'>Jul 18, 2017 02:22:24 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:22:24 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:22:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 30s+724ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:22:24 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:22:28 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:22:49 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:22:50 PM</td>
+					<td class='step-details'>Sim search Results  data  found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:22:50 PM</td>
+					<td class='step-details'>SIM search results  data found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:22:55 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_060Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_059.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_059.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_059.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_061 ManageSIM_SearchSim_IMEI</span>
+						<span class='test-time'>Jul 18, 2017 02:23:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:23:03 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:23:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+654ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:23:03 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:23:07 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:23:25 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:23:26 PM</td>
+					<td class='step-details'>Sim search Results  data  found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:23:26 PM</td>
+					<td class='step-details'>SIM search results  data found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:23:31 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_061Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_061.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_061.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_061.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_062 ManageSIM_SearchSim_ICCID</span>
+						<span class='test-time'>Jul 18, 2017 02:23:40 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:23:40 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:24:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 26s+680ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:23:40 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:23:43 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:24:01 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:24:01 PM</td>
+					<td class='step-details'>Sim search Results  data  found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:24:01 PM</td>
+					<td class='step-details'>SIM search results  data found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:24:07 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_062Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_062.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_062.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_062.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_063 ManageSIM_SearchSim_IPADDRESS</span>
+						<span class='test-time'>Jul 18, 2017 02:24:15 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:24:15 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:24:42 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 26s+647ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:24:15 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:24:21 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:24:38 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:24:38 PM</td>
+					<td class='step-details'>Sim search Results  data  found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:24:38 PM</td>
+					<td class='step-details'>SIM search results  data found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:24:42 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_063Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_063.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_063.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_063.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_064 ManageSIM_SearchSim_MSISDN</span>
+						<span class='test-time'>Jul 18, 2017 02:24:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:24:51 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:25:19 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+596ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:24:51 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:24:54 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:25:13 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:25:13 PM</td>
+					<td class='step-details'>Sim search Results  data  found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:25:13 PM</td>
+					<td class='step-details'>SIM search results  data found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:25:19 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_064Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_064.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_064.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_064.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_065 ManageSIM_SearchSim_APN Profile</span>
+						<span class='test-time'>Jul 18, 2017 02:25:27 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:25:27 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:25:57 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 30s+404ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:25:27 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:25:32 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:25:54 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:25:54 PM</td>
+					<td class='step-details'>Sim search Results  data  found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:25:54 PM</td>
+					<td class='step-details'>SIM search results  data found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:25:57 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_065Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_065.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_065.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_065.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_071 ManageSIM_SIM_Diagnostic Trace</span>
+						<span class='test-time'>Jul 18, 2017 02:26:06 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:26:06 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:26:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+618ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:26:06 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:26:10 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:26:30 PM</td>
+					<td class='step-details'>diagnosic trace page has not been displayed successfully</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>2:26:30 PM</td>
+					<td class='step-details'>diagnosic trace page has not been displayed successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:26:33 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_071Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_071.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_071.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_071.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='28'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_094 ManageSIM_SIMManufactrerOrder_Filter</span>
+						<span class='test-time'>Jul 18, 2017 02:26:42 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:26:42 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:27:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 26s+254ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:26:42 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:26:47 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:27:07 PM</td>
+					<td class='step-details'>Sims search results data found</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:27:08 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_094Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_094.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_094.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_094.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_095 ManageSIM_SIMManufactrerOrder_View Order</span>
+						<span class='test-time'>Jul 18, 2017 02:27:18 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:27:18 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:27:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 34s+17ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:27:18 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:27:20 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:27:46 PM</td>
+					<td class='step-details'>sim orders are successfully viewed</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:27:52 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_095Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_095.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_095.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_095.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_111 ManageVPNs_NumberList_Back to Top</span>
+						<span class='test-time'>Jul 18, 2017 02:28:02 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:28:02 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:28:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 23s+896ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:28:02 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:28:06 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:28:20 PM</td>
+					<td class='step-details'>search is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:28:25 PM</td>
+					<td class='step-details'>back to top button is clicked successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:28:25 PM</td>
+					<td class='step-details'>successfully go to the top of the page</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:28:26 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_111Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_111.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_111.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_111.png'></li>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_111.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_111.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_111.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='31'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_115 ManageVPNs_CallListConfiguration_Filter</span>
+						<span class='test-time'>Jul 18, 2017 02:28:34 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:28:34 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:28:56 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+968ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:28:34 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:28:39 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:28:52 PM</td>
+					<td class='step-details'>get calllistconfigurations successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:28:56 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_115Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_115.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_115.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_115.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='32'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_121 ManageEvents_NotificationEvents_Filter by Event Name</span>
+						<span class='test-time'>Jul 18, 2017 02:29:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:29:03 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:29:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+924ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:29:03 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:29:09 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:29:23 PM</td>
+					<td class='step-details'>event is filtered successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:29:26 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_121Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_121.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_121.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_121.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_122 ManageEvents_NotificationEvents_Filter by by Customer Code</span>
+						<span class='test-time'>Jul 18, 2017 02:29:35 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:29:35 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:30:02 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+168ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:29:35 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:29:38 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:29:54 PM</td>
+					<td class='step-details'>filteration is done successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:30:02 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_122Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_122.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_122.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_122.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='34'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_123 ManageEvents_NotificationEvents_Threshold Enable Disable</span>
+						<span class='test-time'>Jul 18, 2017 02:30:10 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:30:10 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:30:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 37s+537ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:30:10 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:30:13 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:30:47 PM</td>
+					<td class='step-details'>clicked on enabled status</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:30:47 PM</td>
+					<td class='step-details'>disabled successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:30:48 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_123Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_123.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_123.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_123.png'></li>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_123.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_123.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_123.png'></li>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_123.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_123.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_123.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='35'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_124 ManageEvents_NotificationEvents_Customer visibility</span>
+						<span class='test-time'>Jul 18, 2017 02:30:56 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:30:56 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:31:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 34s+653ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:30:56 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:31:01 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:31:29 PM</td>
+					<td class='step-details'>clicked on crossed eye</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:31:29 PM</td>
+					<td class='step-details'>visible of event is done successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:31:30 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_124Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_124.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_124.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_124.png'></li>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_124.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_124.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_124.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='36'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_125 ManageEvents_NotificationEvents_Clear Filter</span>
+						<span class='test-time'>Jul 18, 2017 02:31:40 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:31:40 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:32:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 53s+224ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:31:40 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:31:44 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:32:28 PM</td>
+					<td class='step-details'>filteration is cleared successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:32:33 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_125Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_125.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_125.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_125.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='37'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_142 Network_ConfigureNetworkTrace_Back To Top</span>
+						<span class='test-time'>Jul 18, 2017 02:32:42 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:32:42 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:32:58 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+742ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:32:42 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:32:45 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:32:49 PM</td>
+					<td class='step-details'>Scroll down has been done</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:32:54 PM</td>
+					<td class='step-details'>Successfully clicked on Back to top button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:32:55 PM</td>
+					<td class='step-details'>Successfully reached on the top button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:32:58 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_142Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_142.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_142.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_142.png'></li>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_142.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_142.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_142.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='38'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_143 Network_ConfigureNetworkTrace_Filter by APN</span>
+						<span class='test-time'>Jul 18, 2017 02:33:05 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:33:05 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:33:19 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+93ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:33:05 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:33:11 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:33:15 PM</td>
+					<td class='step-details'>successfully get the list of Network Trace using filters.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:33:16 PM</td>
+					<td class='step-details'>successfully get the list of Network Trace  using filters</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:33:19 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_143Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_143.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_143.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_143.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='39'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSP_147 Network_ProcessingInformation_KPI Filter</span>
+						<span class='test-time'>Jul 18, 2017 02:33:28 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:33:28 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:34:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 40s+691ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:33:28 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:33:36 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:34:05 PM</td>
+					<td class='step-details'>successfully get the list of KPI trends successfully using filters.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:34:06 PM</td>
+					<td class='step-details'>successfully get the list of KPI trends successfully using filters</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:34:09 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_147Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_147.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_147.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSP_147.png'></li>
+							</ul>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='40'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSPOpco_152 Filter by KPI name</span>
+						<span class='test-time'>Jul 18, 2017 02:34:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:34:16 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:34:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+247ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:34:16 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:34:26 PM</td>
+					<td class='step-details'>Login is successful</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:34:31 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_152Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='41'>
+					<div class='test-heading'>
+						<span class='test-name'>GDSPOpco_152 Filter by KPI name</span>
+						<span class='test-time'>Jul 18, 2017 02:34:41 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jul 18, 2017 02:34:41 PM</span>
+	<span class='label end-time'>Jul 18, 2017 02:34:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+657ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:34:41 PM</td>
+					<td class='step-details'>Browser has been Launched</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:34:45 PM</td>
+					<td class='step-details'>Login is suceessful</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:34:49 PM</td>
+					<td class='step-details'>show KPI trend has been displayed</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:34:53 PM</td>
+					<td class='step-details'>show KPI trend has been clicked successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:34:54 PM</td>
+					<td class='step-details'><span class='label white-text green'>TC_153Test Case Passed</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+							<ul class='screenshots'>
+								<li><img data-featherlight='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOpco_152.png' width='10%' src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOpco_152.png' data-src='C:\Users\arabinda.samal\new proj\GDSP_REGRESSION_GUI_AUTOMATION_platform\src\test\java\extentReports\TestReport18-Jul-2017 02-09\18-Jul-2017 02-09-46GDSPOpco_152.png'></li>
+							</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>41</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>205</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jul 18, 2017 02:09:34 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jul 18, 2017 02:34:54 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>1,520,348ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 40,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				
+				passChild: 58,
+				failChild: 1,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 146,
+				exceptionsChild: 1,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/5ed7b0c339b51aa347b44ccaa2e2ff29905b2f9f/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+	</body>
+	
+</html>

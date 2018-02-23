@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+    <class name="PlatformUserActions.GDSP_PlatformGUI_001_IMPCLASS"/>
+    <class name="PlatformUserActions.GDSP_PlatformGUI_002_IMPCLASS"/>
+    <class name="PlatformUserActions.GDSP_PlatformGUI_003_IMPCLASS"/>
+    <class name="PlatformUserActions.GDSP_PlatformGUI_004_IMPCLASS"/>
+    <class name="PlatformUserActions.GDSP_PlatformGUI_005_IMPCLASS"/>
+    <class name="PlatformUserActions.GDSP_PlatformGUI_006_IMPCLASS"/>
+    <class name="PlatformUserActions.GDSP_PlatformGUI_007_IMPCLASS"/>
+    <class name="PlatformUserActions.GDSP_PlatformGUI_008_IMPCLASS"/>
+    <class name="PlatformUserActions.GDSP_PlatformGUI_009_IMPCLASS"/>
+       
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

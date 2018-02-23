@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Test">
+    <classes>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_001_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_010_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_013_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_014_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_018_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_019_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_025_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_027_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_028_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_029_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_030_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_031_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_032_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_033_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_034_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_035_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_037_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_040_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_044_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_047_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_050_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_051_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_052_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_053_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_054_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_056_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_057_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_058_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_059_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_060_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_061_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_062_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_063_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_064_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_065_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_066_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_067_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_071_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_072_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_073_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_074_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_075_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_076_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_077_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_078_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_079_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_080_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_081_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_082_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_083_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_084_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_085_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_086_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_088_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_089_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_094_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_095_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_096_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_101_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_102_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_103_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_104_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_105_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_106_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_107_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_108_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_109_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_110_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_111_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_112_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_115_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_116_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_117_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_118_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_119_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_120_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_121_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_122_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_123_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_124_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_125_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_126_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_127_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_128_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_129_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_130_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_131_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_132_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_141_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_142_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_143_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_147_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_149_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_150_IMPCLASS"/>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_152_IMPCLASS"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="OpcoUserActions.GDSP_OpcoGUI_067_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="TC_067" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_067_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_096_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="TC_096" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_096_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_030_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_030_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_126_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_126_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_147_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_147_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_076_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_076_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_047_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_047_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_132_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_132_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_064_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_064_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_109_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_109_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_058_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_058_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_054_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_054_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_080_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_080_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_110_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_110_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_033_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_033_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_060_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_060_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_150_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_150_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_120_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_120_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_078_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="TC_078" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_078_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_143_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_143_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_065_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="TC_065" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_065_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_088_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="TC_087" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_088_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_025_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_025_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_081_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_081_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_057_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_057_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_031_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_031_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_085_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_085_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_129_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="TC_129" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_129_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_066_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="TC_066" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_066_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_122_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_122_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_115_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_115_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_128_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_128_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_079_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_079_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_102_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="TC_102" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_102_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_056_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_056_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_035_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_035_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_082_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_082_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_028_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_028_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_095_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_095_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_121_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_121_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_018_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_018_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_050_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_050_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_111_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_111_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_037_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_037_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_094_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_094_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_118_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_118_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_052_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_052_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_127_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_127_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_053_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_053_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_141_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_141_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_123_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_123_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_051_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_051_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_142_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_142_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_101_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_101_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_071_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_071_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_083_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_083_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_108_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_108_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_044_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_044_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_107_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_107_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_106_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="TC_106" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_106_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_014_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_014_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_089_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="TC_089" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_089_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_032_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_032_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_116_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_116_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_117_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_117_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_072_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="TC_072" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_072_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_061_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_061_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_073_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="TC_073" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_073_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_124_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_124_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_029_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_029_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_063_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_063_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_075_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_075_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_084_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_084_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_149_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_149_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_027_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_027_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_001_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_001_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_125_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_125_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_019_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_019_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_104_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_104_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_077_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="TC_077" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_077_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_103_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="TC_103" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_103_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_119_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_119_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_059_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_059_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_013_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_013_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_112_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_112_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_130_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_130_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_086_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+          <include name="TC_086" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_086_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_131_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_131_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_010_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_010_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_105_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_105_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_062_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_062_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_034_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_034_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_152_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_152_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_074_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_074_IMPCLASS -->
+      <class name="OpcoUserActions.GDSP_OpcoGUI_040_IMPCLASS">
+        <methods>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- OpcoUserActions.GDSP_OpcoGUI_040_IMPCLASS -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
